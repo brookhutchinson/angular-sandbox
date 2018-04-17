@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent implements OnInit {
   // properties
-  firstName = 'John';
-  lastName = 'Doe';
-  age = 32;
+  firstName = 'Brook';
+  lastName = 'Hutchinson';
+  age = 42;
+  address = {
+    street: '1950 Hughes Landing Blvd',
+    city: 'The Woodlands',
+    state: 'Texas'
+  };
+
 
   // methods
   constructor() {
@@ -37,5 +43,9 @@ export class UserComponent implements OnInit {
   hasBirthday() {
     // add one to the age property
     this.age += 1;
+  }
+
+  showAge() {
+    return this.age;
   }
 }
